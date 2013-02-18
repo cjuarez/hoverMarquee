@@ -1,0 +1,83 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+    opacity: 0;
+  }
+  45%, 55% {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(10%);
+       -moz-transform: translateX(10%);
+         -o-transform: translateX(10%);
+        -ms-transform: translateX(10%);
+            transform: translateX(10%);
+    opacity: 0;
+  }
+  45%, 55% {
+    -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
+         -o-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(90%);
+       -moz-transform: translateX(90%);
+         -o-transform: translateX(90%);
+        -ms-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+}
+
+.marquee-target {
+  overflow: hidden;
+}
+
+.marquee-target .marquee-text {
+  display: inline-block;
+  width: $marqueeWidth;
+  text-align: center;
+  margin-left: -($marqueeWidth / 2);
+}
+.marquee-target .marquee {
+  -webkit-animation-name: fadeIn;
+     -moz-animation-name: fadeIn;
+       -o-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+     -moz-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+       -o-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+  font-size: 30px;
+  display: block;
+}
+.marquee-target .marquee-right {
+  -webkit-animation-direction: normal;
+     -moz-animation-direction: normal;
+       -o-animation-direction: normal;
+          animation-direction: normal;
+}
+.marquee-target .marquee-left {
+  -webkit-animation-direction: reverse;
+     -moz-animation-direction: reverse;
+       -o-animation-direction: reverse;
+          animation-direction: reverse;
+}
